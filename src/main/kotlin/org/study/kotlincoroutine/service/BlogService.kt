@@ -11,6 +11,7 @@ class BlogService(
     private val blogClients: List<BlogClient>,
 ) {
 
+    //suspend coroutineScope, async await 동작 확인
     suspend fun getBlogList(days: Long): BlogResponse = coroutineScope {
 
         println("[Main] 실행 스레드: ${Thread.currentThread().name}")
